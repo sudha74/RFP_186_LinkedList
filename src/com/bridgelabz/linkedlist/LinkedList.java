@@ -48,6 +48,17 @@ public class LinkedList<T> {
         return count;
     }
 
+    public T popLast() {
+        T deletedElemnt = tail.data;
+        Node<T> temp = head;
+        while (temp.next != tail) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        temp = tail;
+        return deletedElemnt;
+    }
+
     void display() {
         Node<T> temp = head;
         while (temp != null) {
