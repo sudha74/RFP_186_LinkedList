@@ -10,6 +10,12 @@ public class LinkedListMain {
 
         linkedList.popLast();
 
+        if (linkedList.search(30) != null) {
+            System.out.println("Data found");
+        } else {
+            System.out.println("Data not found");
+        }
+
         linkedList.display();
     }
 }
